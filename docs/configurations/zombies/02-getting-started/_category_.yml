@@ -1,0 +1,18 @@
+# position: 2.5 # float position is supported
+label: 'Getting Started'
+# collapsible: true # make the category collapsible
+collapsed: false # keep the category open by default
+# className: red
+link:
+  type: generated-index
+  title: Getting Started
+  slug: '/category/configurations/zombies/getting-started'
+  description: |
+    In Phantazm, many gameplay aspects are configurable, that is, they are defined by a set of 
+    human-readable configuration files. This approach is preferable to baking such details into 
+    the code, as it becomes possible for anyone with access to the files to adjust values easily 
+    without needing specialized skills. In this section, you'll learn about the basic of YAML and 
+    the Element framework.
+    
+# customProps:
+#   description: Brooo

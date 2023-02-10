@@ -1,0 +1,45 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-color-primary: #ec5b26;
+  --ifm-color-primary-dark: #da5226;
+  --ifm-color-primary-darker: #c84a26;
+  --ifm-color-primary-darkest: #b74226;
+  --ifm-color-primary-light: #f26e3a;
+  --ifm-color-primary-lighter: #f97b3f;
+  --ifm-color-primary-lightest: #ff8944;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme="dark"] {
+    --ifm-color-primary: #ec5b26;
+  --ifm-color-primary-dark: #c84a26;
+  --ifm-color-primary-darker: #b74226;
+  --ifm-color-primary-darkest: #a63926;
+  --ifm-color-primary-light: #ff7f40;
+  --ifm-color-primary-lighter: #ff8f50;
+  --ifm-color-primary-lightest: #ff9f60;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+.no-code-box > div {
+  --prism-background-color: transparent !important;
+  --ifm-pre-background: transparent !important;
+}
+
+.hello-yaml-type-table {
+  table-layout: fixed;
+  word-break: break-all;
+  width: 100%;
+}
+
+.hello-yaml-type-table pre {
+  display: grid;
+}

@@ -1,0 +1,14 @@
+# position: 2.5 # float position is supported
+label: 'Shop Configuration'
+# collapsible: true # make the category collapsible
+collapsed: false # keep the category open by default
+# className: red
+link:
+  type: generated-index
+  title: Shop Configuration
+  slug: '/category/configurations/zombies/shop-configuration'
+  description: |
+    This page describes the valid element objects that may be used when configuring shops.
+    
+# customProps:
+#   description: Brooo
