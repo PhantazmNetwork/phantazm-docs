@@ -4,14 +4,16 @@
 const fs = require("fs");
 
 const metaFromHtml = (src) => {
-  const content = fs.readFileSync(src ?? "./meta.html", 'utf-8');
+  const content = fs.readFileSync(src ?? "./meta.html", "utf-8");
   const parser = new DOMParser();
-  const data = parser.parseFromString(content, 'text/html');
-  return [...data.head.children].map(x => ({
-    name: x.getAttribute("property"),
-    content: x.getAttribute("content")
-  }))
-}
+  const data = parser.parseFromString(content, "text/html");
+  return [...data.head.children]
+    .filter((x) => x.getAttribute("property"))
+    .map((x) => ({
+      name: x.getAttribute("property"),
+      content: x.getAttribute("content"),
+    }));
+};
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
