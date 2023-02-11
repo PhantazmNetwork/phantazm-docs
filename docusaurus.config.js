@@ -2,11 +2,12 @@
 // Note: type annotations allow type checking and IDEs autocompletion
 
 const fs = require("fs");
+const { JSDOM } = require("jsdom");
 
 const metaFromHtml = (src) => {
   const content = fs.readFileSync(src ?? "./meta.html", "utf-8");
-  const parser = new DOMParser();
-  const data = parser.parseFromString(content, "text/html");
+  const data = new JSDOM(content).window.document;
+
   return [...data.head.children]
     .filter((x) => x.getAttribute("property"))
     .map((x) => ({
