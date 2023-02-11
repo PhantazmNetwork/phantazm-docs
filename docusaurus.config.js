@@ -40,7 +40,7 @@ const config = {
   // to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: "en",
-    locales: ["en", "fr", "ja"],
+    locales: ["en"],
   },
 
   presets: [
@@ -100,6 +100,11 @@ const config = {
 
       // Replace with your project's social card
       image: "img/favion.png",
+
+      colorMode: {
+        defaultMode: "dark",
+        respectPrefersColorScheme: true
+      },
 
       metadata: [
         ...metaFromHtml(),
