@@ -4,4 +4,4 @@ title: Introduction
 ---
 
 # Why did you click this? Stop spending money on hypixel.
-What [this](https://www.youtube.com/watch?v=dQw4w9WgXcQ) to improve your IQ.
+Watch [this](https://www.youtube.com/watch?v=dQw4w9WgXcQ) to improve your IQ.

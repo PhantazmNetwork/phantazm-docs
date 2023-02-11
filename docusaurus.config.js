@@ -1,9 +1,11 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
+const { metaFromConfig } = require("./docusaurus.config.extras");
+
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "Phantazm",
+  title: "Phantazm Docs",
   tagline: "Unique PvE Minecraft Network",
   favicon: "img/favicon.png",
 
@@ -26,7 +28,7 @@ const config = {
   // to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: "en",
-    locales: ["en", "fr", "ja"],
+    locales: ["en"],
   },
 
   presets: [
@@ -38,7 +40,7 @@ const config = {
           sidebarPath: require.resolve("./sidebars.js"),
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl: "https://github.com/PhantazmNetwork/PhantazmServer/",
+          editUrl: "https://github.com/PhantazmNetwork/phantazm-docs",
           routeBasePath: "/",
         },
         blog: false,
@@ -50,7 +52,6 @@ const config = {
   ],
 
   // themes: ["@docusaurus/theme-search-algolia"],
-
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
@@ -85,7 +86,25 @@ const config = {
       },
 
       // Replace with your project's social card
-      image: "img/favion.png",
+      image: "/img/social-banner.png",
+
+      colorMode: {
+        defaultMode: "dark",
+        respectPrefersColorScheme: true,
+      },
+
+      metadata: [
+        ...metaFromConfig({
+          description:
+            "The Phantazm Docs website is the official source of information on the tools and frameworks used in the Phantazm Network Technologies Minecraft minigame server. It is designed to help developers and game designers create custom minigames with ease, providing in-depth knowledge and resources. Explore the technologies behind Phantazm and master its tools.",
+          title: "Home | Phantazm Docs",
+          url: "https://docs.phantazm.org/",
+          siteName: "Phantazm Docs",
+          image: "https://docs.phantazm.org/img/social-banner.png",
+          color: "#ec5b26",
+        }),
+        // additional meta
+      ],
 
       navbar: {
         title: "Phantazm Docs",
