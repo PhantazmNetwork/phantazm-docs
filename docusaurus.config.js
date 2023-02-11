@@ -1,24 +1,11 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const fs = require("fs");
-const { JSDOM } = require("jsdom");
-
-const metaFromHtml = (src) => {
-  const content = fs.readFileSync(src ?? "./meta.html", "utf-8");
-  const data = new JSDOM(content).window.document;
-
-  return [...data.head.children]
-    .filter((x) => x.getAttribute("property"))
-    .map((x) => ({
-      name: x.getAttribute("property"),
-      content: x.getAttribute("content"),
-    }));
-};
+const { metaFromConfig } = require("./docusaurus.config.extras");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "Phantazm",
+  title: "Phantazm Docs",
   tagline: "Unique PvE Minecraft Network",
   favicon: "img/favicon.png",
 
@@ -53,7 +40,7 @@ const config = {
           sidebarPath: require.resolve("./sidebars.js"),
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl: "https://github.com/PhantazmNetwork/PhantazmServer/",
+          editUrl: "https://github.com/PhantazmNetwork/phantazm-docs",
           routeBasePath: "/",
         },
         blog: false,
@@ -65,7 +52,6 @@ const config = {
   ],
 
   // themes: ["@docusaurus/theme-search-algolia"],
-
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
@@ -100,15 +86,23 @@ const config = {
       },
 
       // Replace with your project's social card
-      image: "img/favion.png",
+      image: "/img/social-banner.png",
 
       colorMode: {
         defaultMode: "dark",
-        respectPrefersColorScheme: true
+        respectPrefersColorScheme: true,
       },
 
       metadata: [
-        ...metaFromHtml(),
+        ...metaFromConfig({
+          description:
+            "Explore Phantazm Network Technologies with phantazm docs - the official documentation website with information on tools and frameworks for Minecraft minigame server. Perfect for developers and game designers.",
+          title: "Home | Phantazm Docs",
+          url: "https://docs.phantazm.org/",
+          siteName: "Phantazm Docs",
+          image: "https://docs.phantazm.org/img/social-banner.png",
+          color: "#ec5b26",
+        }),
         // additional meta
       ],
 
