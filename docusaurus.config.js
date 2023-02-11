@@ -96,7 +96,7 @@ const config = {
       metadata: [
         ...metaFromConfig({
           description:
-            "Explore Phantazm Network Technologies with phantazm docs - the official documentation website with information on tools and frameworks for Minecraft minigame server. Perfect for developers and game designers.",
+            "The Phantazm Docs website is the official source of information on the tools and frameworks used in the Phantazm Network Technologies Minecraft minigame server. It is designed to help developers and game designers create custom minigames with ease, providing in-depth knowledge and resources. Explore the technologies behind Phantazm and master its tools.",
           title: "Home | Phantazm Docs",
           url: "https://docs.phantazm.org/",
           siteName: "Phantazm Docs",
